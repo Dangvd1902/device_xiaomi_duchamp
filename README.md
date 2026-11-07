@@ -28,3 +28,11 @@ Front Camera | 16 MP, f/2.4, (wide), 1/3.06", 1.0µm
 
 ## Device picture
 ![Poco X6 Pro 5G](https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-poco-x6-pro-2.jpg "Poco X6 Pro in black, yellow and grey")
+
+---
+
+## ⚖️ Disclaimer (Tuyên Bố Miễn Trừ Trách Nhiệm)
+
+> [!WARNING]
+> - **Use at your own risk:** Custom ROM compilation, kernel modification, and partition flashing may void your device warranty or result in hardware bricking or data loss. The author assumes **NO responsibility** for any damages caused to your device.
+> - **Intellectual Property:** All proprietary blobs, device drivers, and firmware components belong to their respective owners (Xiaomi Inc., MediaTek Inc.). This repository provides device trees for academic research, open-source development, and personal maintenance only.
