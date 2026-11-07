@@ -28,3 +28,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=POCO/duchamp_global/duchamp:14/UP1A.230905.011/OS2.0.1.0.VNLMIXM:user/release-keys \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
 
+
+# RisingOS Custom Maintainer & Specs
+RISING_MAINTAINER := dangvd
+RISING_BUILDTYPE := STABLE

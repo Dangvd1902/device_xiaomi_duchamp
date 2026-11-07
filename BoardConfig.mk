@@ -90,7 +90,7 @@ BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVIC
 BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD) $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
 
 TARGET_KERNEL_CONFIG := duchamp
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6897
+# TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6897
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
@@ -214,3 +214,7 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
 include vendor/xiaomi/duchamp/BoardConfigVendor.mk
+-include vendor/aosp/config/BoardConfigSoong.mk
+
+# Bypass prebuilt ELF checks
+BUILD_BROKEN_PREBUILT_ELF_FILES := true

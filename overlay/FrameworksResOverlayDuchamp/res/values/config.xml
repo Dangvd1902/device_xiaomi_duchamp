@@ -147,8 +147,8 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">3000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">5000</integer>
 
     <!-- The maximum range of gamma adjustment possible using the screen
          auto-brightness adjustment setting. -->
@@ -451,7 +451,7 @@
          than this threshold, it is applied. See the config_screenThresholdLevels description for
          how the constraint value is chosen. -->
     <integer-array name="config_screenBrighteningThresholds">
-        <item>0</item>
+        <item>100</item>
     </integer-array>
 
     <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
@@ -461,7 +461,7 @@
          this threshold, it is applied. See the config_screenThresholdLevels description for how
          the constraint value is chosen. -->
     <integer-array name="config_screenDarkeningThresholds">
-        <item>0</item>
+        <item>150</item>
     </integer-array>
 
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
@@ -681,4 +681,12 @@
     -->
     <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
 
+
+    <!-- Fast and slow ramp rate for smooth brightness transitions -->
+    <integer name="config_brightness_ramp_rate_fast">200</integer>
+    <integer name="config_brightness_ramp_rate_slow">40</integer>
+
+    <!-- Fingerprint / UDFPS Screen-Off and low-latency improvements -->
+    <bool name="config_supportsScreenOffUdfps">true</bool>
+    <bool name="config_enableUdfpsLongPress">false</bool>
 </resources>
