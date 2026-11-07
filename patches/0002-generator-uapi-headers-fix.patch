@@ -1,0 +1,14 @@
+diff --git a/build/soong/generator/generator.go b/build/soong/generator/generator.go
+index ecc4e8bd..a5a0caa3 100644
+--- a/build/soong/generator/generator.go
++++ b/build/soong/generator/generator.go
+@@ -221,6 +221,9 @@ func (g *Module) GenerateAndroidBuildActions(ctx android.ModuleContext) {
+ 	}
+ 
+ 	cmd := customExpandVariables(ctx, String(g.properties.Cmd))
++	if strings.Contains(cmd, "headers_install") {
++		cmd = "mkdir -p $(genDir)/usr/include && cp -rf bionic/libc/kernel/uapi/* $(genDir)/usr/include/ && (cp -rf bionic/libc/kernel/uapi/asm-arm64/* $(genDir)/usr/include/ 2>/dev/null || true)"
++	}
+ 
+ 	rawCommand, err := android.Expand(cmd, func(name string) (string, error) {
+ 		switch name {
